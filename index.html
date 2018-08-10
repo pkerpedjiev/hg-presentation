@@ -37,33 +37,8 @@
         </p>
     </section>
 
-    <section>
-        <h3>Topics</h3>
-        <ul>
-            <li class="fragment">The questions</li>
-            <li class="fragment">The data</li>
-            <li class="fragment">The challenges</li>
-            <li class="fragment">The technology</li>
-            <li class="fragment">The other applications</li>
-            <li class="fragment">The summary</li>
-        </ul>
-    </section>
-
-    <section>
-        <h3>Topics</h3>
-        <ul>
-            <li><b>The questions</b></li>
-            <li style="color: grey">The data</li>
-            <li style="color: grey">The challenges</li>
-            <li style="color: grey">The technology</li>
-            <li style="color: grey">The other applications</li>
-            <li style="color: grey">The summary</li>
-        </ul>
-    </section>
-
-
     <section> 
-        <h3>A question</h3>
+        <h3>The Question</h3>
 
         <p><i>What is the structure of DNA within the nucleus?</i></p>
     </section>
@@ -115,6 +90,15 @@
     </section>
 
     <section>
+        <h3>Why do we care?</h3>
+        <div style="display: flex; justify-content: space-evenly; margin-top: 50px;">
+            <img class="fragment" src="img/equilibrium-globule.png">
+            <img class="fragment" src="img/fractal-globule.png">
+        </div>
+        <p class='fragment'><small>It affects biological processes such as gene expression (Zuin et al. 2014), cancer (Hnisz et al. 2016), X-Chromosome inactivation (Chen et al. 2014) </small></p>
+    </section>
+
+    <section>
         <h3>A question</h3>
 
         <p><i>How do we measure DNA structure?</i></p>
@@ -160,14 +144,6 @@
         <aside class="notes" src="" />
     </section>
 
-    <section>
-        <h3>Why do we measure DNA structure?</h3>
-        <div style="display: flex; justify-content: space-evenly; margin-top: 50px;">
-            <img class="fragment" src="img/equilibrium-globule.png">
-            <img class="fragment" src="img/fractal-globule.png">
-        </div>
-        <p class='fragment'><small>It affects biological processes such as gene expression (Zuin et al. 2014), cancer (Hnisz et al. 2016), X-Chromosome inactivation (Chen et al. 2014) </small></p>
-    </section>
 
     <section>
         <h3>Topics</h3>
@@ -255,35 +231,51 @@
         </div>
     </section>
 
-   <section>
-        <h3>Topics</h3>
-        <ul>
-            <li>The questions</li>
-            <li>The data</li>
-            <li><b>The challenges</b></li>
-            <li style="color: grey">The technology</li>
-            <li style="color: grey">The other applications</li>
-            <li style="color: grey">The summary</li>
-        </ul>
+    <section>
+        <h3>HiC Contact Matrices</h3>
+        <div style="display: flex; align-items: center; justify-content: space-evenly" >
+
+            <p class="fragment" data-fragment-index="2">To understand the structure of DNA within the nucleus, we need
+            to be able to <b>explore</b> and <b>compare</b> HiC contact
+            matrices in the <b>context</b> of other genomic data and annotations</p>
+
+            <img src="img/higlass-sequencing.png" width="500" class="fragment" data-fragment-index="1"/>
+        </div>
+        <aside class="notes" src="" />
     </section>
 
     <section>
-        <h3>Hi-C Data Visualization Challenges</h3>
-        <ul>
-            <li class='fragment'><b>Big data</b> - 3M x 3M matrices</li>
-            <li class='fragment'><b>Disparate data</b> - many relevant datatypes</li>
-            <li class='fragment'><b>Lots of data</b> - many different samples and experimental conditions</li>
-        </ul>
+        <h3>Goal of this project</h3>
+
+        <p>Create software to explore, compare and contextualize HiC contact matrices</p>
     </section>
+
+
     <section>
-        <h3>Big data: how do we display a 3M x 3M matrix in a browser?</h3>
-        <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;" class="fragment">
-            <div style="width: 500px">
+        <h3>Our Challenges</h3>
+    </section>
+
+    <section>
+        <h3>Challenge #1</h3>
+        <p class="fragment">How do we explore a 3M x 3M matrix in a web browser?</p>
+
+        <ul>
+            <li class="fragment">9 trillion cells</li>
+            <li class="fragment">22Gb of compressed data</li>
+            <li class="fragment">Dynamic range spanning multiple orders of magnitude</li>
+        </ul>
+
+    </section>
+
+    <section>
+        <h3>Solution</h3>
+        <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
+            <div style="width: 500px" class="fragment">
                 <p>
                     <b>Solution:</b> Allow the user to navigate the matrix like a map: zooming and panning to regions of interest.
                 </p>
             </div>
-            <iframe src="hg-demo4.html" height="500px" width="500px"></iframe>
+            <iframe src="hg-demo4.html" height="500px" width="500px" class="fragment"></iframe>
         </div>
     </section>
 
@@ -291,10 +283,215 @@
         <h3>How does this work?</h3>
         <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
             <div>
-                <img class='fragment' src="img/higlass-client-server.png" width="400px"/><br>
-                <img class='fragment' src="img/higlass-client-server-2.png" width="400px"/>
+                <img class='fragment' src="img/higlass-client-server.png" width="400px" data-fragment-index="2"/><br>
+                <img class='fragment' src="img/higlass-client-server-2.png" width="400px" data-fragment-index="3"/>
             </div>
-            <iframe src="hg-demo5.html" height="500px" width="500px"></iframe>
+            <iframe src="hg-demo5.html" height="500px" width="500px" class="fragment" data-fragment-index="1"></iframe>
+        </div>
+    </section>
+
+    <section>
+        <h3>How is the client built?</h3>
+        <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
+            <div style="width: 150px; margin-right: 30px">
+                <img src="img/higlass-client.png" width="80px" />
+            </div>
+            <table style="vertical-align: middle">
+                <tr>
+                    <td>
+                        <p><small>Fast WebGL-based rendering</small></p>
+                    </td>
+                    <td style="vertical-align: middle">
+                        <img src="img/pixijs.png" width="160px" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><small>Scales, utility functions and behaviors such as zooming and brushing</small></p>
+                    </td>
+                    <td style="vertical-align: middle">
+                        <img src="img/d3.png" width="60px" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><small>User interface composition and manipulation</small></p>
+                    </td>
+                    <td style="vertical-align: middle">
+                        <img src="img/react.png" width="250px" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section>
+        <h3>How is the server built?</h3>
+        <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
+            <div style="width: 150px; margin-right: 30px">
+                <img src="img/higlass-server.png" width="80px" />
+            </div>
+            <table style="vertical-align: middle">
+                <tr>
+                    <td>
+                        <p><small>Content management</small></p>
+                    </td>
+                    <td style="vertical-align: middle">
+                        <img src="img/django.png" width="160px" />
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2" style="vertical-align: middle">
+                        <p><small>Data storage</small></p>
+                    </td>
+                    <td style="vertical-align: middle">
+                        <img src="img/hdf.png" width="60px" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: middle">
+                        <img src="img/cooler-logo.png" width="150px" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section>
+        <h3>How are they deployed?</h3>
+        <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
+            <img src="img/higlass-docker-composition.png" width="500px" />
+        </div>
+        <p class="fragment"><small>The HiGlass Docker container can either be deployed locally or on cloud infrastructure (eg. http://higlass.io).</small></p>
+    </section>
+
+    <section>
+        <h3>How are the components tested?</h3>
+        <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
+            <div style="width: 150px; margin-right: 30px">
+                <img src="img/higlass-client.png" width="80px" />
+            </div>
+            <div>
+              <video width="500" muted="muted" autoplay controls loop preload="none">
+                  <source src="img/higlass_tests.mp4" type="video/mp4">
+              </video>
+            </div>
+        </div>
+        Integration testing to verify functionality of UI and visualization elements
+    </section>
+
+    <section>
+        <h3>How are the components tested?</h3>
+        <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
+            <div style="width: 150px; margin-right: 30px">
+                <img src="img/higlass-server.png" width="80px" />
+            </div>
+            <div>
+                <img src="img/test-higlass-server.png" width="700px" />
+            </div>
+        </div>
+        Unit tests for models and APIs.
+    </section>
+
+    <section>
+        <h3>How are the components tested?</h3>
+        <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
+            <div style="width: 150px; margin-right: 30px">
+                <img src="img/higlass-docker.png" width="80px" />
+            </div>
+            <div>
+                <img src="img/test-higlass-docker.png" width="700px" />
+            </div>
+        </div>
+        Use Travis CI to build Docker container and call REST API endpoints.
+    </section>
+
+    <section>
+        <h3>Open Questions</h3>
+        <ul>
+            <li>How do we efficiently retrieve subsections of a compressed sparse trillion cell matrix?
+                <small>
+                <ul>
+                    <li>E.g. extract a 256x256 submatrix in less than 100ms</li>
+                </ul>
+                </small>
+            </li>
+            <li>How do we render millions of data points at >30 fps?</li>
+            <li>What are the minimum APIs required to request variations of the data</li> 
+                <small>
+                <ul>
+                    <li>E.g. Give me dataset x divided by dataset y</li>
+                </ul>
+                </small>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Who built this?</h3>
+        <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
+            <div style="width: 150px; margin-right: 30px">
+                <img src="img/higlass-client.png" width="80px" />
+            </div>
+            <div>
+                <img src="img/higlass-client-contributors.png" width="700px"/>
+                <small>
+                    <a href="http://github.com/hms-dbmi/higlass-client">
+                        http://github.com/hms-dbmi/higlass-client
+                    </a>
+                </small>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Who built this?</h3>
+        <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
+            <div style="width: 150px; margin-right: 30px">
+                <img src="img/higlass-server.png" width="80px" />
+            </div>
+            <div>
+                <img src="img/higlass-server-contributors.png" width="700px"/>
+                <small>
+                    <a href="http://github.com/hms-dbmi/higlass-server">
+                        http://github.com/hms-dbmi/higlass-server
+                    </a>
+                </small>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Who built this?</h3>
+        <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
+            <div style="width: 150px; margin-right: 30px">
+                <img src="img/higlass-docker.png" width="80px" />
+            </div>
+            <div>
+                <img src="img/higlass-docker-contributors.png" width="700px"/>
+                <small>
+                    <a href="http://github.com/hms-dbmi/higlass-docker">
+                        http://github.com/hms-dbmi/higlass-docker
+                    </a>
+                </small>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Who built this?</h3>
+        <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
+            <div style="width: 150px; margin-right: 10px">
+                <img src="img/cooler-logo.png" />
+            </div>
+            <div>
+                <img src="img/cooler-contributors.png" width="700px"/>
+                <small>
+                    <a href="http://github.com/mirnylab/cooler">
+                        http://github.com/mirnylab/cooler
+                    </a>
+                </small>
+            </div>
         </div>
     </section>
 
@@ -309,35 +506,43 @@
     -->
 
     <section>
-        <h3>Challenges</h3>
-        <ul>
-            <li class='fragment'><b>Data storage:</b> HDF5 files storing sparse matrices at multiple resolutions (1K, 2K, 4K, ...) </li>
-            <li class='fragment'><b>Data fetching:</b>  Use augmented online maps API 
-                <pre>dataset/zoom_level/x_position/y_position/data_transform
-            </li>
-            <li class='fragment'><b>Data rendering:</b>  Use WebGL-based PIXI.js to render textures containing 65K blocks of data points (tiles)</li>
-        </ul>
+        <h3>Challenge #2</h3>
+        <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
+            <div style="width: 500px" class="fragment">
+                <p>
+                    How do we place the HiC contact matrix in the context of other genomic data?
+                </p>
+            </div>
+            <iframe src="hg-demo4.html" height="500px" width="500px" class="fragment"></iframe>
+        </div>
     </section>
 
+    <section>
+        <h3>Solution</h3>
+        <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
+            <div style="width: 500px">
+                Add other genomic data as "tracks" along the axes.
+            </div>
+            <iframe src="hg_demo1.html" height="500" width="500"></iframe>
+
+        </div>
+    </section>
 
     <section>
-        <h3>What else do we know about the genome?</h3>
+        <h3> How do we do this? </h3>
+        <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
+            <div>
+                <img class='fragment' src="img/higlass-client-server-annotations.png" width="400px" data-fragment-index="2"/><br>
+                <img class='fragment' src="img/higlass-client-server-annotations-2.png" width="400px" data-fragment-index="3"/>
+            </div>
+            <iframe src="hg-demo6.html" height="300px" width="500px" class="fragment" data-fragment-index="1"></iframe>
+        </div>
+    </section>
+
+    <section>
+        <h3>What data do we display as 1D tracks?</h3>
 
         <table>
-            <tr class='fragment'>
-                <td style="vertical-align: middle">
-                    Contacts
-                </td>
-                <td style="vertical-align: middle">
-                    <img src="img/higlass-matrix.png" height="100px"/>
-                </td>
-                <td style="vertical-align: middle; width:350px">
-                    <small>
-                        Matrix
-                    </small>
-                </td>
-            </tr>
-
             <tr class='fragment'>
                 <td style="vertical-align: middle">
                     Chromosome boundaries
@@ -347,7 +552,7 @@
                 </td>
                 <td style="vertical-align: middle; width:350px">
                     <small>
-                        Axis
+                        chromSizes file
                     </small>
                 </td>
             </tr>
@@ -361,11 +566,10 @@
                 </td>
                 <td style="vertical-align: middle; width:350px">
                     <small>
-                        Standard UCSC Genome Browser-like Exon/Intron view
+                        SQLite (beddb)
                     </small>
                 </td>
             </tr>
-
 
             <tr class='fragment'>
                 <td style="vertical-align: middle">
@@ -376,13 +580,103 @@
                 </td>
                 <td style="vertical-align: middle; width:350px">
                     <small>
-                        Normal line plot
+                        bigWig, hitile
                     </small>
                 </td>
             </tr>
-
         </table>
+    </section>
 
+    <section>
+        <h3> Gene Annotations</h3>
+        <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
+            <div style="width: 500px">
+                <small>
+                <ul>
+                    <li class="fragment">uuid: unique identifier</li>
+                    <li class="fragment">startPos: start of annotation</li>
+                    <li class="fragment">endPos: end of annotations</li>
+                    <li class="fragment">chrOffset: offset from the start of the containing chromosome</li>
+                    <li class="fragment">importance: occlusion order based on number of citations</li>
+                    <li class="fragment">fields: annotations's data (e.g. exon positions)</li>
+                </ul>
+                </small>
+            </div>
+            <iframe src="hg-demo3.html" height="300" width="500"></iframe>
+
+        </div>
+    </section>
+
+    <section>
+        <h3>Challenge #3</h3>
+            <p> How do we compare data from multiple experimental conditions to
+            gain insights and communicate findings?  </p>
+        </h3>
+    </section>
+
+    <section>
+        <h3>Solution</h3>
+            <iframe src="hg_demo2.html" height="400" width="960"></iframe>
+            <p>Create a flexible framework for synchronizing zoom and location across views.</p>
+    </section>
+
+    <section>
+        <h3>Solution</h3>
+
+            <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
+                <img src="img/higlass-interaction-multiple-views-1.png" height="200px"/>
+                <img src="img/higlass-interaction-multiple-views-2.png" width="300px"/>
+            </div>
+            <p> Views can be arbitrarily linked according to their zoom and location. They can also "project" their viewport onto another view to provide a context and detail.</p>
+    </section>
+
+    <section>
+        <h3>Solution</h3>
+        <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
+            <div>View Linking Configuration<br>
+            <img src="img/higlass-interaction-multiple-views-2.png" width="300px"/>
+            </div>
+            <iframe src="hg-demo8.html" height="500" width="500"></iframe>
+        </div>
+    </section>
+
+    <section>
+        <h3>Summary</h3>
+        <p>We created software to explore, compare and contextualize HiC contact matrices</p>
+        <p>It's available at <a href="http://higlass.io">http://higlass.io</a></p>
+    </section>
+
+    <section>
+        <h3>Marketing</h3>
+        <p>HiGlass is/was used by:</p>
+        <ul>
+            <li class="fragment">Over 30 academic laboratories.</li>
+            <li class="fragment">4 companies (therapeutics, diagnostics, and space propulsion)</li>
+            <li class="fragment">1 diagnostic laboratory (non-profit)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Acknowledgements</h3>
+        <div style="display: flex; justify-content: space-between;">
+            <div style="width: 500px">
+            <p><b><u>Harvard Medical School</u></b></p>
+            <ul>
+                <li>Nils Gehlenborg</li>
+                <li>Fritz Lekschas (also at John Paulson School of Engineering)</li>
+                <li>Chuck McCallum</li>
+                <li>4DN DCIC Team</li>
+            </ul>
+
+            </div>
+            <div>
+            <p><b><u>MIT</u></b></p>
+            <ul>
+                <li>Nezar Abdennur</li>
+                <li>Leonid Mirny</li>
+            </ul>
+        </div>
+        </div>
     </section>
 
     <section>
@@ -398,22 +692,13 @@
 
     </section>
 
+
     <section>
         <h3>What other information can help us understand genome structure?</h3>
         <iframe src="hg_demo2.html" height="500" width="960"></iframe>
 
     </section>
 
-    <section>
-        <h3>How do we serve from multiple data sources?</h3>
-
-        <img src="img/higlass-data-storage.png" width="700px"/><br>
-
-        <b>Lots of data:</b> Each dataset is stored in a compressed multi-resolution file on the server.
-
-
-        <aside class="notes" src="Why doesn't the client just access the files directly?" />
-    </section>
 
     <section>
         <h3>What if we want to see context?</h3>
@@ -482,7 +767,7 @@
     <section>
         <h3>Exploring clinical copy number variation calls </h3>
         <br>
-        <p>Collaboration with Unversity of Utah and ARUP Laboratories</p>
+        <p>Collaboration with University of Utah and ARUP Laboratories</p>
     </section>
 
     <section>
@@ -531,42 +816,6 @@
             <li class="fragment">Lots of Data</li>
             <li class="fragment">Other Applications</li>
         </ul>
-    </section>
-
-    <section>
-        <h3>Acknowledgements</h3>
-        <div style="display: flex; justify-content: space-between;">
-            <div style="width: 500px">
-            <p><b><u>Harvard Medical School</u></b></p>
-            <ul>
-                <li>Nils Gehlenborg</li>
-                <li>Fritz Lekschas (also at John Paulson School of Engineering)</li>
-                <li>Nezar Abdennur</li>
-                <li>Chuck McCallum</li>
-                <li>4DN DCIC Team</li>
-            </ul>
-
-            </div>
-            <div>
-            <p><b><u>MIT</u></b></p>
-            <ul>
-                <li>Nezar Abdennur</li>
-                <li>Leonid Mirny</li>
-            </ul>
-            <p><b><u>University of Utah</u></b></p>
-            <ul>
-                <li>Alex Lex</li>
-                <li>Clement Vachet</li>
-            </ul>
-            <p><b><u>ARUP</u></b></p>
-            <ul>
-                <li>Jacob Durtschi</li>
-                <li>David Lachowski</li>
-            </ul>
-        </div>
-        </div>
-
-
     </section>
 </div>
 
