@@ -99,14 +99,8 @@
     </section>
 
     <section>
-        <h3>A question</h3>
-
-        <p><i>How do we measure DNA structure?</i></p>
-    </section>
-
-    <section>
-        <h3>How do we measure DNA structure</h3>
-        <div style="display: flex; align-items: center; justify-content: space-evenly" >
+        <h3>How do we measure DNA structure?</h3>
+        <div class="fragment" style="display: flex; align-items: center; justify-content: space-evenly" >
             <div>
                 <h4>X-Ray Crystallography?</h4>
                 <br>
@@ -118,7 +112,7 @@
     </section>
 
     <section>
-        <h3>How do we measure DNA structure</h3>
+        <h3>How do we measure DNA structure?</h3>
         <div style="display: flex; align-items: center; justify-content: space-evenly" >
             <div>
                 <h4>Microscopy?</h4>
@@ -134,31 +128,14 @@
     </section>
 
     <section>
-        <h3>How do we measure DNA structure</h3>
+        <h3>How do we measure DNA structure?</h3>
         <div style="display: flex; align-items: center; justify-content: space-evenly" >
 
-            <h4>Contacts?</h4>
+            <h4>Hi-C?</h4>
 
             <img src="img/higlass-sequencing.png" width="500"/>
         </div>
         <aside class="notes" src="" />
-    </section>
-
-
-    <section>
-        <h3>Topics</h3>
-        <ul>
-            <li>The questions</li>
-            <li><b>The data</b></li>
-            <li style="color: grey">The challenges</li>
-            <li style="color: grey">The technology</li>
-            <li style="color: grey">The other applications</li>
-            <li style="color: grey">The summary</li>
-        </ul>
-    </section>
-
-    <section>
-        <h3>The Data</h3>
     </section>
 
     <section>
@@ -232,11 +209,11 @@
     </section>
 
     <section>
-        <h3>HiC Contact Matrices</h3>
+        <h3>Hi-C Contact Matrices</h3>
         <div style="display: flex; align-items: center; justify-content: space-evenly" >
 
             <p class="fragment" data-fragment-index="2">To understand the structure of DNA within the nucleus, we need
-            to be able to <b>explore</b> and <b>compare</b> HiC contact
+            to be able to <b>explore</b> and <b>compare</b> Hi-C contact
             matrices in the <b>context</b> of other genomic data and annotations</p>
 
             <img src="img/higlass-sequencing.png" width="500" class="fragment" data-fragment-index="1"/>
@@ -247,7 +224,7 @@
     <section>
         <h3>Goal of this project</h3>
 
-        <p>Create software to explore, compare and contextualize HiC contact matrices</p>
+        <p>Create software to explore, compare and contextualize Hi-C contact matrices</p>
     </section>
 
 
@@ -510,7 +487,7 @@
         <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
             <div style="width: 500px" class="fragment">
                 <p>
-                    How do we place the HiC contact matrix in the context of other genomic data?
+                    How do we place the Hi-C contact matrix in the context of other genomic data?
                 </p>
             </div>
             <iframe src="hg-demo4.html" height="500px" width="500px" class="fragment"></iframe>
@@ -593,12 +570,12 @@
             <div style="width: 500px">
                 <small>
                 <ul>
-                    <li class="fragment">uuid: unique identifier</li>
-                    <li class="fragment">startPos: start of annotation</li>
-                    <li class="fragment">endPos: end of annotations</li>
-                    <li class="fragment">chrOffset: offset from the start of the containing chromosome</li>
-                    <li class="fragment">importance: occlusion order based on number of citations</li>
-                    <li class="fragment">fields: annotations's data (e.g. exon positions)</li>
+                    <li class="fragment"><b>uuid:</b> unique identifier</li>
+                    <li class="fragment"><b>startPos:</b> start of annotation</li>
+                    <li class="fragment"><b>endPos:</b> end of annotations</li>
+                    <li class="fragment"><b>chrOffset:</b> offset from the start of the containing chromosome</li>
+                    <li class="fragment"><b>importance:</b> occlusion order based on number of citations</li>
+                    <li class="fragment"><b>fields:</b> annotations's data (e.g. exon positions)</li>
                 </ul>
                 </small>
             </div>
@@ -642,7 +619,7 @@
 
     <section>
         <h3>Summary</h3>
-        <p>We created software to explore, compare and contextualize HiC contact matrices</p>
+        <p>We created software to explore, compare and contextualize Hi-C contact matrices</p>
         <p>It's available at <a href="http://higlass.io">http://higlass.io</a></p>
     </section>
 
@@ -650,7 +627,7 @@
         <h3>Marketing</h3>
         <p>HiGlass is/was used by:</p>
         <ul>
-            <li class="fragment">Over 30 academic laboratories.</li>
+            <li class="fragment">Over 30 academic laboratories</li>
             <li class="fragment">4 companies (therapeutics, diagnostics, and space propulsion)</li>
             <li class="fragment">1 diagnostic laboratory (non-profit)</li>
         </ul>
@@ -677,145 +654,6 @@
             </ul>
         </div>
         </div>
-    </section>
-
-    <section>
-        <h3>How do we display multiple different data types?</h3>
-        <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
-            <div style="width: 500px">
-                Disparate data sources are aligned along the axes of the heatmap to provide extra information.
-            </div>
-            <iframe src="hg_demo1.html" height="500" width="500"></iframe>
-
-        </div>
-        <aside class="notes" src="Mention that by splitting data between server and client, we can easily make custom visualizations on the client, without having to worry about the size of the data." />
-
-    </section>
-
-
-    <section>
-        <h3>What other information can help us understand genome structure?</h3>
-        <iframe src="hg_demo2.html" height="500" width="960"></iframe>
-
-    </section>
-
-
-    <section>
-        <h3>What if we want to see context?</h3>
-        <iframe src="hg-demo8.html" height="600" width="960"></iframe>
-    </section>
-
-    <section>
-        <h3>How do we generalize location synchronization and overview - detail between multiple views?</h3>
-
-        <div class="fragment">
-            <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
-                <img src="img/higlass-interaction-multiple-views-1.png" height="200px"/>
-                <img src="img/higlass-interaction-multiple-views-2.png" width="300px"/>
-            </div>
-            <p> Create a user interface for creating and linking views by zoom, location or projection.</p>
-        </div>
-
-    </section>
-
-   <section>
-        <h3>Topics</h3>
-        <ul>
-            <li>The questions</li>
-            <li>The data</li>
-            <li>The challenges</li>
-            <li><b>The technology</b></li>
-            <li style="color: grey">The other applications</li>
-            <li style="color: grey">The summary</li>
-        </ul>
-    </section>
-
-    <section>
-      <h3>Technology Stack: Front End</h3>
-      
-      PixiJS (WebGL) vs. SVG (DOM)
-    <div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 50px;">
-        <img src="img/pixi-70k-circles.gif" width="300px"/>
-        <img src="img/svg-70k-circles.gif" width="300px"/>
-    </div>
-
-      <aside class="notes">How much work did that entail</aside>
-    </section>
-
-    <section>
-      <h3>Technology Stack: Back End</h3>
-      
-      <ul>
-        <li class="fragment">Django server for storing list of available datasets</li>
-        <li class="fragment">HDF5 based file storage for large arrays and matrices</li>
-        <li class="fragment">SQLite for annotation storage (R-tree indexing for range queries)</li>
-      </ul>
-</section>
-
-   <section>
-        <h3>Topics</h3>
-        <ul>
-            <li>The questions</li>
-            <li>The data</li>
-            <li>The challenges</li>
-            <li>The technology</li>
-            <li><b>The other applications</b></li>
-            <li style="color: grey">The summary</li>
-        </ul>
-    </section>
-
-    <section>
-        <h3>Exploring clinical copy number variation calls </h3>
-        <br>
-        <p>Collaboration with University of Utah and ARUP Laboratories</p>
-    </section>
-
-    <section>
-        <img src="img/ctracks-screencapture.gif">
-        <p>How do we place computational calls in genomic context?</p>
-    </section>
-
-    <section>
-        <h3>cTracks</h3>
-        <img src="img/ctracks-screenshot.png" width="400px">
-        <p><i>Clinician-focused web application for exploring copy number variations within a genomic context</i></p>
-        <p><a href="https://github.com/visdesignlab/cTracks">https://github.com/visdesignlab/cTracks</a></p>
-    </section>
-
-    <!--
-
-    <section>
-      <h3>Snippet Clustering</h3>
-      <video width="800" muted="muted" controls>
-          <source src="img/8-coloring.mov" type="video/mp4">
-      </video>
-    </section>
-
-    <section>
-      <h3>HiPiler Applications</h3>
-      <img src="img/hipiler-applications.png" width="800" />
-    </section>
-    -->
-       <section>
-        <h3>Topics</h3>
-        <ul>
-            <li>The questions</li>
-            <li>The data</li>
-            <li>The challenges</li>
-            <li>The technology</li>
-            <li>The regions</li>
-            <li><b>The summary</b></li>
-        </ul>
-    </section>
-    <section>
-        <h3>Summary</h3>
-        <ul>
-            <li class="fragment">Genome Organization</li>
-            <li class="fragment">Big Data</li>
-            <li class="fragment">Disparate Data</li>
-            <li class="fragment">Lots of Data</li>
-            <li class="fragment">Other Applications</li>
-        </ul>
     </section>
 </div>
 
